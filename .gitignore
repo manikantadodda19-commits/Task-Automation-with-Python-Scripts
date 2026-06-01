@@ -13,3 +13,5 @@ venv.bak/
 # Uploads and Outputs specific to this app
 uploads/
 output/
+
+.vercel

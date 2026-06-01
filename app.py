@@ -11,8 +11,12 @@ from datetime import datetime
 app = Flask(__name__)
 
 # ===== Configuration =====
-UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
-OUTPUT_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'output')
+if os.environ.get("VERCEL"):
+    UPLOAD_FOLDER = '/tmp/uploads'
+    OUTPUT_FOLDER = '/tmp/output'
+else:
+    UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
+    OUTPUT_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'output')
 
 # Ensure folders exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)

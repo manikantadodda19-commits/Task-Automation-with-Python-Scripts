@@ -176,19 +176,7 @@
       </div>
     </section>
 
-    <!-- Key Concepts Section -->
-    <div class="concepts-section">
-      <p class="concepts-title">Key Concepts Used</p>
-      <div class="concepts-list">
-        <span class="concept-chip">os</span>
-        <span class="concept-chip">shutil</span>
-        <span class="concept-chip">re</span>
-        <span class="concept-chip">requests</span>
-        <span class="concept-chip">file handling</span>
-        <span class="concept-chip">BeautifulSoup</span>
-        <span class="concept-chip">Flask</span>
-      </div>
-    </div>
+
 
   </div>
 
@@ -469,19 +457,7 @@
       });
     });
 
-    // ===== Concept Chips Stagger Animation on Scroll =====
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.concept-chip').forEach((chip, i) => {
-            chip.style.animation = `tagPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) ${i * 0.08}s both`;
-          });
-        }
-      });
-    }, { threshold: 0.3 });
 
-    const conceptsSection = document.querySelector('.concepts-section');
-    if (conceptsSection) observer.observe(conceptsSection);
   </script>
 
 </body>
